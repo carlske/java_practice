@@ -33,8 +33,8 @@ public class intro {
         button1.addActionListener(e-> addlistone());
         showList1Button.addActionListener(e-> showlist(lis1) );
         showList2Button.addActionListener(e-> showlist(list2));
-        sortList1Button.addActionListener(e-> soetJava8(lis1));
-        sortList2Button.addActionListener(e -> soetJava8(list2));
+        sortList1Button.addActionListener(e-> soet(lis1));
+        sortList2Button.addActionListener(e -> soet(list2));
     }
 
     private void addlistone() {
@@ -49,7 +49,7 @@ public class intro {
         list.forEach(lis -> System.out.println(lis));
     }
 
-    private  void soetJava8(List<String> tipo){
+    private  void soet(List<String> tipo){
         Collections.sort(tipo,(lis1,list2) -> lis1.compareTo(list2));
         System.out.println("ordered list");
         showlist(tipo);
